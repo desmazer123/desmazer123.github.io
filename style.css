@@ -1,0 +1,317 @@
+:root{
+    --blue:#313f59;
+    --bgcol:#c2c6d2;
+    --white:#e9e7ea;
+    --gray:#c1c4cd;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: var(--bgcol);
+}
+main{
+    background-color: var(--white);
+    width:240mm;
+    box-shadow:45px 21px 60px 10px #87878787;
+    margin:0 auto;
+    margin:5% auto 5% auto ;
+    padding:15px 0 15px 0;
+    
+}
+.profil{
+    width:70%;
+    margin:5px auto;
+   
+}
+
+
+.top{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--blue);
+    
+    border-radius:15px;
+    width:95%;
+    margin: 0 auto;
+    margin-bottom: 140px;
+    position: relative;
+}
+/* ################### les titres #################### */
+h1{
+    color: var(--white);
+    text-transform: uppercase;
+    font-size:1.8rem;
+    
+}
+h2{
+
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size:1.5em;
+}
+h4{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size:1em;
+    margin-bottom:5px;
+    margin-top:15px;
+}
+h2.lookingfor span{
+    color:rgb(223, 13, 13);
+}
+.titre{
+    color: var(--white);
+    
+}
+.name,.contact{
+    padding: 15px 35px 15px 35px;
+}
+.fa{
+    font-size:1em;
+    color:var(--white);
+    margin-right:5px;
+}
+.contact{
+    color:var(--white);
+    display: flex;
+    flex-direction: column;
+    
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+/* ###################looking for #################### */
+.lookingfor {
+    border-right: 1px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    position:absolute;
+    top:280px;
+    margin:0 50px 0 90px;
+   
+  }
+
+#contenu{
+    display:flex;
+    justify-content:flex-start;
+    width:95%;
+    margin:0 auto;
+   
+
+}
+.left{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    border-radius:15px;
+    flex:2;  
+    padding:15px;
+}
+.cadreimg{
+    width:200px;
+    height:200px;
+    
+}
+.photoProfil{
+    width:150px;
+    height:170px;
+    border-radius:50%;
+    margin-top:-280PX;
+
+} 
+.intitule,h4{
+    margin-bottom:5px;
+    margin-top:20px;
+    font-weight: bolder;
+   
+}
+.intitule{
+    text-align: center;
+}
+
+.right{
+    flex:3;
+    margin-left:70px;
+}
+
+.cache{
+    display:none;
+}
+
+li{
+    text-decoration: none;
+}
+li span{
+    font-weight: bold;
+}
+
+.one{
+    margin-left:20px;
+    font-size:1.2em;
+}
+.two{
+    margin-left:60px;
+    font-size:1.2em;
+}
+.temps{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    margin-left:-90px;
+    margin-top: 51px;
+    transform: rotate(90deg);
+    padding:15px;
+    position:absolute;
+}
+.temps p{
+    background-color: var(--blue);
+    color: var(--white);
+    padding:5px;
+    border-radius:15px;
+    
+}
+.boo{
+    width: 50px;
+    height:2px;
+}
+ /*#################### slider  ##########################*/
+ .slider {
+    width: 80%;
+    height:600px;
+    margin:0 auto;
+    overflow: hidden;
+  }
+  
+  .slider img {
+    border-radius:15px;
+    width: 95%;
+    height: 85%;
+    display: none;
+    margin:0 auto;
+    
+  }
+  
+  .slider img.active {
+    display: block;
+  }
+  
+  .slider-title {
+    top: 10px;
+    left: 10px;
+    color: var(--blue);
+    font-size: 1.5em;
+    text-align: center;
+    margin:15px;
+  }
+
+ /*#################### progress bar ##########################*/
+
+  .progress-bar {
+    background-color: #f2f2f2;
+    height: 20px;
+   
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    background-color:var(--blue);
+    height: 100%;
+    
+   
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition: 1s ease-in-out; 
+  }
+  .margin-bas{
+    margin:0px 0px 5px 25px;
+  }
+  /*#######################------imprimante------###########################*/
+  @media print {
+    /* styles spécifiques pour l'impression */
+ 
+    header{
+      width: 214mm;
+      background: #313f59;
+
+    }
+    main{
+      background-color: #fff;
+      width: 214mm;
+      height: 299mm;
+      margin:0 auto;
+     
+    }
+    .photoProfil{
+        margin-top:-150px;
+    }
+    .tech{
+        display: inline-block;
+        margin:5px;
+    }
+    .photoProfil{
+       
+        margin-top:-100px;
+        
+    }
+    .slider{
+        display:none;
+    }
+    h2{
+        margin-top:0px;
+    }
+    .lookingfor{
+        display:none;
+    }
+}
+@media screen and (max-width: 880px) {
+    
+    main{
+      margin:0 auto;
+      width:80%;
+      
+    } 
+    .top,#contenu{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+    }
+  
+    .photoProfil{ 
+        margin-top:-100px;
+    }
+    h2{
+        margin-top:20px;
+    }
+    .lookingfor{
+        position: relative;
+        font-size: 0.9em;
+        margin: 0 auto;
+        top:-100px;
+        
+    }
+    .lookingfor span{
+        color:rgb(223, 13, 13);
+    }
+   /*  .slider{
+        padding-bottom: 20px;
+        max-height:600px;
+    } */
+}
+@media screen and (max-width: 483px) {
+
+.lookingfor{
+    font-size: 0.6rem;;
+}
+}
