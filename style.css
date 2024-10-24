@@ -116,13 +116,17 @@ a{
     height:200px;
     
 }
-.photoProfil{
+.photoProfilbox{
     width:150px;
     height:170px;
     border-radius:50%;
     margin-top:-280PX;
+    background-image: url('./img/desm.png'); /* Utilise url() au lieu de src */
+    background-size: cover;
+    background-position: center;
 
-} 
+}
+
 .intitule,h4{
     margin-bottom:5px;
     margin-top:20px;
@@ -236,25 +240,64 @@ li span{
   /*#######################------imprimante------###########################*/
   @media print {
     /* styles spécifiques pour l'impression */
+   
  
     header{
       width: 214mm;
       background: #313f59;
+      -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
 
     }
-    main{
-      background-color: #fff;
+    .container-ref {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      
+    .column {
+        width: 48%;
+        box-sizing: border-box;
+      }
+    .temps p{
+        background: var(--blue);
+        color: var(--white);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;   
+    }
+    
+   
+    main ,#mainprint{
+
+      background-color: var(--white);
       width: 214mm;
-      height: 299mm;
+      height: 300mm !important;
       margin:0 auto;
+      font-size: 12px;
+      margin-bottom:0;
+      padding-bottom:0;
+      box-shadow:none;
+      /*-webkit-print-color-adjust: exact;  Pour Chrome et Safari */
+     /* print-color-adjust: exact; /* Pour les autres navigateurs */
      
     }
-    .photoProfil{
-        margin-top:-150px;
+    .left{
+        background:var(--gray);
+
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    #contenu{
+        margin-top:-70px;
+    }
+    .photoProfilbox{
+        margin-top:-80px;
+        height:150px;
+        width:150px;
     }
     .tech{
         display: inline-block;
-        margin:5px;
+        margin:2px;
     }
     .photoProfil{
        
@@ -267,7 +310,7 @@ li span{
     h2{
         margin-top:0px;
     }
-    .lookingfor{
+    .lookingfor, .box-progress{
         display:none;
     }
 }
