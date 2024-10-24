@@ -121,7 +121,7 @@ a{
     height:170px;
     border-radius:50%;
     margin-top:-280PX;
-    background-image: url('./img/desm.png'); /* Utilise url() au lieu de src */
+    background-image: url('./img/desm.png');
     background-size: cover;
     background-position: center;
 
